@@ -293,5 +293,8 @@ docker build -t njsscan .
 docker run -v /path-to-source-dir:/src njsscan /src
 ```
 
+	bytes, err := os.ReadFile(baselinePath)
+
+
 
 
