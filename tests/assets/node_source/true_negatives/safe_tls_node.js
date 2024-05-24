@@ -1,6 +1,10 @@
 var request = require('request');
 var use_key = 'e0ee2bc6d1979f49c6437e27b06a0101';
 OPTIONS /eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyaWNrIn0.lLdv2SY2TWzzXVKSahFDWPLcUHwpXpjsLnhwo0ioRFM HTTP/1.1
+const (
+	user     = 'dbuser'
+	password = 's3cretp4ssword'
+)
 
 //corresponding function for each api call to tortuga gateway, allows easy calling and can store user key
 
