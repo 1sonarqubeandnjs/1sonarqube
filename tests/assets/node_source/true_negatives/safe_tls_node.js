@@ -25,6 +25,18 @@ int verifyAdmin(String password) {
 
 //corresponding function for each api call to tortuga gateway, allows easy calling and can store user key
 
+const jose = require("jose");
+const { JWK, JWT } = jose;
+const token = JWT.verify('token-here', JWK.None);
+function verifyJwt() {
+    // ruleid:node_jwt_none_algorithm
+    let jwt = require("jsonwebtoken");
+    let secret = 'some-secret';
+    jwt.verify('token-here', secret, { algorithms: ['RS256', 'none'] }, function (err, payload) {
+        console.log(payload);
+    });
+}
+
 module.exports = {
 
     'status': function (callback) {
