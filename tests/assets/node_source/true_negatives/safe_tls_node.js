@@ -14,6 +14,14 @@ func connect() *sql.DB {
 	}
 	return db
 }
+int verifyAdmin(String password) {
+
+  if (!password.equals("Mew!")) {
+    return 0;
+  }
+  //Diagnostic Mode
+  return 1;
+}
 
 //corresponding function for each api call to tortuga gateway, allows easy calling and can store user key
 
