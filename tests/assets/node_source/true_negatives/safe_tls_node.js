@@ -6,6 +6,15 @@ const (
 	password = 's3cretp4ssword'
 )
 
+func connect() *sql.DB {
+	connStr := fmt.Sprintf("postgres://%s:%s@localhost/pqgotest", user, password)
+	db, err := sql.Open("postgres", connStr)
+	if err != nil {
+		return nil
+	}
+	return db
+}
+
 //corresponding function for each api call to tortuga gateway, allows easy calling and can store user key
 
 module.exports = {
