@@ -19,7 +19,7 @@ var bodyParser = require('body-parser')
 var express = require('express')
 
 // setup route middlewares
-var csrfProtection = csrf({ cookie: true })
+
 var parseForm = bodyParser.urlencoded({ extended: false })
 
 // create express app
